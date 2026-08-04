@@ -1,0 +1,7 @@
+.worktrees/
+.DS_Store
+node_modules/
+
+# Local instruction/context files — not part of the published project
+CLAUDE.md
+github.txt
