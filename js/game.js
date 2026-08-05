@@ -53,6 +53,7 @@ function startGame() {
   resetBall();
   if (typeof Difficulty !== 'undefined') Difficulty.reset(state);
   if (typeof Zones !== 'undefined') Zones.reset(state);
+  if (typeof Player !== 'undefined') Player.reset(state);
   if (typeof UI !== 'undefined') UI.showHUD(state);
   state.lastTimestamp = performance.now();
   requestAnimationFrame(loop);
@@ -81,6 +82,7 @@ function loop(timestamp) {
   if (typeof Zones !== 'undefined') Zones.update(state, dt);
   if (typeof Render !== 'undefined') Render.draw(ctx, canvas, state);
   if (typeof Zones !== 'undefined') Zones.draw(ctx, canvas, state);
+  if (typeof Player !== 'undefined') Player.draw(ctx, canvas, state);
   if (typeof UI !== 'undefined') UI.update(state);
 
   requestAnimationFrame(loop);
